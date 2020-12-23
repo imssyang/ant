@@ -18,6 +18,9 @@ ant -f fetch.xml -Ddest=system   # get the library dependencies of most of the A
 # 代理模式运行
 ant -Dhttp.proxyHost=proxy -Dhttp.proxyPort=81
 
+# 诊断环境
+ant -diagnostics
+
 # Test for classpath-related problems
 ant -noclasspath
 unset the CLASSPATH environment variable.
