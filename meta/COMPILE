@@ -15,4 +15,8 @@ vim /opt/ant/fetch.xml
 cp NetRexx-3.09-GA.zip /opt/ant/cache/NetRexx.zip
 ant -f fetch.xml -Ddest=system   # get the library dependencies of most of the Ant tasks that require them to /opt/ant/lib.
 
+# Test for classpath-related problems
+ant -noclasspath
+unset the CLASSPATH environment variable.
+
 
