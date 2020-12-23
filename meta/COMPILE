@@ -1,7 +1,18 @@
 
+# 安装
 tar xzvf apache-ant-1.10.9-bin.tar.gz
 mv apache-ant-1.10.9 /opt/ant
 export ANT_HOME=/opt/ant
 export PATH=$ANT_HOME/bin:$PATH
+
+# 更新ant任务依赖库
+sha256sum NetRexx-3.09-GA.zip
+    35c6d6df67918be246ca98694d7c48bf6ced1a82d097f9bf22519d9c753c32c7  NetRexx-3.09-GA.zip
+vim /opt/ant/lib/libraries.properties
+    netrexx.sha256=35c6d6df67918be246ca98694d7c48bf6ced1a82d097f9bf22519d9c753c32c7
+vim /opt/ant/fetch.xml
+    <property name="temp.dir" location="${ant.home}/cache"/>
+cp NetRexx-3.09-GA.zip /opt/ant/cache/NetRexx.zip
 ant -f fetch.xml -Ddest=system   # get the library dependencies of most of the Ant tasks that require them to /opt/ant/lib.
+
 

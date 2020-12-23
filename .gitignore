@@ -1,6 +1,7 @@
 # Ignore by git
 archive
 bin
+cache
 lib
 manual
 

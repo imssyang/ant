@@ -61,7 +61,8 @@ and open a new console. or, by hand
   <property file="${lib.dir}/libraries.properties"/>
 
   <!-- Temporary cache for working files -->
-  <property name="temp.dir" location="${user.home}/.ant/tempcache"/>
+  <!-- <property name="temp.dir" location="${user.home}/.ant/tempcache"/> -->
+  <property name="temp.dir" location="${ant.home}/cache"/>
   <property name="keep.temp.dir" value="true"/>
 
   <import file="get-m2.xml"/>
