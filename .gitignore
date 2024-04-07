@@ -1,7 +1,8 @@
-# Ignore by git
-archive
-bin
-cache
-lib
-manual
-
+bin/
+contributors.xml
+etc/
+fetch.xml
+get-m2.xml
+lib/
+manual/
+patch.xml
